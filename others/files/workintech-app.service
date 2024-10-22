@@ -5,10 +5,10 @@ After=network.target
 [Service]
 Restart=always
 User=ec2-user
-Group=ec2-group
+Group=ec2-user
 Environment=NODE_ENV=production
-WorkingDirectory=/caminho/para/o/seu/projeto
-ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/ec2-user/workintech-app
+ExecStart=npm run start:prod
 
 [Install]
 WantedBy=multi-user.target
