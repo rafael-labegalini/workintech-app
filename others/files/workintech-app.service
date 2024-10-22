@@ -1,0 +1,14 @@
+[Unit]
+Description=WorkInTech Application Example
+After=network.target
+
+[Service]
+Restart=always
+User=ec2-user
+Group=ec2-group
+Environment=NODE_ENV=production
+WorkingDirectory=/caminho/para/o/seu/projeto
+ExecStart=/usr/bin/npm start
+
+[Install]
+WantedBy=multi-user.target
